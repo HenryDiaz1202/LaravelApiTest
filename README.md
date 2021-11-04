@@ -261,3 +261,91 @@ Abrimos el controlador, nos fijamos que estén importadas las siguientes clases,
 
 
 Todas las funciones del CRUD, index es para mostrar los datos, se puede hacer en la función show también, la de store es para registrar, update para editar y destroy para eliminar; en todas se hace instancia del modelo.
+
+
+### 7.  ROUTES
+
+
+Los routes son las rutas donde se encuentran los ficheros, o la interfaz que verá el usuario final, en este caso usaremos la primera opción, la de api, abrimos ese fichero.
+
+
+![](images/route.jpg)
+
+
+Veamos que esté la clase del o los controladores.
+
+
+![](images/import.jpg)
+
+
+Ahora ponemos todas las rutas para cada función que hayamos creado en el controlador.
+
+
+![](images/rutasApi.jpg)
+
+
+- POST: para agregar o guardar.
+- GET: para obtener.
+- PUT: para actualizar.
+- DELETE: para eliminar.
+
+
+### 8.  TESTS
+
+
+Las funciones test nos permiten comprobar que los métodos que hemos desarrollado funcionan de forma correcto, sin necesidad de hacer interfaz de usuario o sin probarlo en algún programa como POSTMAN, por suerte laravel nos permite crear test, podemos crear las pruebas dentro de la clase que trae por defecto o en una que creemos por aparte.
+
+
+![](images/testRute.jpg)
+
+
+Crearemos la prueba de actualizar y eliminar dentro de la clase de prueba.
+
+
+![](images/teset1.jpg)
+
+
+En response va la ruta de la api, en ambas pasamos un parámetro porque una actualiza y la otra elimina, dentro de los corchetes en la de actualizar pasamos los datos q actualzizar, y en el eliminar solo el mensaje.
+
+
+Ahora, para hacer el test en una clase nueva, simplemente creamos la clase agregando un fichero.
+
+
+![](images/addTes.jpg)
+
+
+Esta función no acepta parámetros.
+
+
+Final mente para ejecutar los test, laravel nos provee un comando.
+
+
+
+```
+ejecutando los tests
+-> php artisan test
+```
+
+
+![](images/tests.jpg)
+
+
+Y así probamos las APIS
+
+
+DEMOSTRACIÓN EN POSTMAN
+
+
+![](images/POST.jpg)
+
+
+![](images/PUT.jpg)
+
+
+![](images/DELETEPS.jpg)
+
+
+LISTANDO LOS DATOS
+
+
+![](images/listall.jpg)
