@@ -2,8 +2,8 @@
 
 
 ### 1.  CREANDO PROYECTO
-Primero creamos el proyecto, antes que todo, debemos ver que la 
-versión de PHP sea mayor o igual a 7.3, para evitar conflictos, si queremos actualziar uno de los métodos es reinstalar xampp o el que uses.
+Primero creamos el proyecto, antes que todo debemos ver que la 
+versión de PHP sea mayor o igual a 7.3, para evitar conflictos, si queremos actualizar php uno de los métodos es reinstalar xampp o el que uses.
 
 ```
 ver la versión de php
