@@ -93,4 +93,67 @@ Ahora, ya que tenemos la base de datos, vamos a configurar el fichero .env de la
 ![](images/env.jpg)
 
 
-Reemplazamos el usuario y ponemos una contraseña si es que usamos, de lo contrario solo ponemos el nombre de la base de datos que creamos anteriormente en :package: DB_DATABASE = NOMBRE DE LA BASE DE DATOS CREADA
+Reemplazamos el usuario y ponemos una contraseña si es que usamos, de lo contrario solo ponemos el nombre de la base de datos que creamos anteriormente en :package: DB_DATABASE = NOMBRE DE LA BASE DE DATOS CREADA. Ahora procedemos a crear los modelos que serían las tablas en la base de datos, usamos en siguiente comando.
+
+
+```
+# opción 1
+comando para crear el modelo simplemente
+
+-> php artisan make:model NOMBRE_MODELO -m
+
+* el -m indica migrate
+---------------------------------------------------------
+# opción 2
+comando para crear el modelo y el controlador
+
+-> php artisan make:model NOMBRE_MODELO -mcr
+
+* indica migrate y controller (recomendado)
+---------------------------------------------------------
+el controlador es donde estarán todas las funciones de CRUD
+para hacer controller ponemos. (si usamos la primera opción en los modelos)
+
+-> php artisan make:controller NOMBRE_CONTROLLER (Ejemplo UsuariosController) --resource
+
+* para que se generen las funciones
+```
+
+
+![](images/mcr.jpg)
+
+
+Ya que tenemos el modelo y el controlador, vamos a poner los campos de la tabla que tenemos en la base de datos, mediante el modelo. Vamos a la parte izquiera en nuestro proyecto, buscamos
+
+
+```
+buscar la tabla
+-> database/migrations
+
+y buscamos el que se creó recientemente, tiene el nombre del modelo.
+```
+
+
+![](images/datab.jpg)
+
+
+Lo abrimos 
+y ponemos los campos de la tabla, dependiendo el tipo de datos que vayamos a guardar le asignamos, en este caso serán strings, el primer y el último campo son agregados automáticamente por laravel.
+
+
+![](images/tabla.jpg)
+
+
+Ya que tengamos los campos de las tablas ya listos migramos.
+
+
+```
+migrando las tablas
+-> php artisan migrate
+```
+
+
+Las migraciones nos crean todo en la base de datos y las formas de migrar son importantes, para ver otras opciones de migración click al link
+
+
+[:pager: Estructura de migraciones](https://laravel.com/docs/8.x/migrations)
