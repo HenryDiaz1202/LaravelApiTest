@@ -1,4 +1,4 @@
-# Probar métodos de APIS
+# Probar métodos de APIS (TESTING API)
 
 Primero creamos el proyecto, antes que todo, debemos ver que la 
 versión de PHP sea mayor o igual a 7.3, para evitar conflictos, si queremos actualziar uno de los métodos es reinstalar xampp o el que uses.
@@ -153,7 +153,12 @@ migrando las tablas
 ```
 
 
-Las migraciones nos crean todo en la base de datos y las formas de migrar son importantes, para ver otras opciones de migración click al link
+![](images/migrate.jpg)
+
+
+Las migraciones nos crean todo en la base de datos y las formas de migrar son importantes, para ver otras opciones de migración click al link ↓
 
 
 [:pager: Estructura de migraciones](https://laravel.com/docs/8.x/migrations)
+
+
