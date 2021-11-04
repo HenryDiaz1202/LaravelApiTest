@@ -93,4 +93,4 @@ Ahora, ya que tenemos la base de datos, vamos a configurar el fichero .env de la
 ![](images/env.jpg)
 
 
-Reemplazamos el usuario y ponemos una contraseña si es que usamos, de lo contrario solo ponemos el nombre de la base de datos que creamos anteriormente en `:package:` DB_DATABASE = NOMBRE DE LA BASE DE DATOS CREADA
+Reemplazamos el usuario y ponemos una contraseña si es que usamos, de lo contrario solo ponemos el nombre de la base de datos que creamos anteriormente en :package: DB_DATABASE = NOMBRE DE LA BASE DE DATOS CREADA
