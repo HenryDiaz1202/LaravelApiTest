@@ -20,3 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::POST('/tareas',[TareasController::class,'store']);
+
+Route::GET('/tareas/listar',[TareasController::class,'index']);

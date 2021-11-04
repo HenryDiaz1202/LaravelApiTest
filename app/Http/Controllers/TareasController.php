@@ -15,7 +15,8 @@ class TareasController extends Controller
      */
     public function index()
     {
-        //
+        $tareas = Tareas::query()->paginate();
+        return response($tareas, 200);
     }
 
     /**
