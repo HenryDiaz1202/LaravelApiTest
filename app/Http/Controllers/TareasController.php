@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\EditarTareasRequest;
 use App\Http\Requests\GuardarTareasRequest;
 use App\Models\Tareas;
 use Illuminate\Http\Request;
@@ -73,9 +74,13 @@ class TareasController extends Controller
      * @param  \App\Models\Tareas  $tareas
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tareas $tareas)
+    public function update(EditarTareasRequest $request, Tareas $tareas)
     {
-        //
+        $tareas->update($request->all());
+        return response()->json([
+            'res'=>true,
+            'mensaje'=>'Editado correctamente'
+        ], 200);
     }
 
     /**
@@ -86,6 +91,10 @@ class TareasController extends Controller
      */
     public function destroy(Tareas $tareas)
     {
-        //
+        $tareas->delete();
+        return response()->json([
+            'res'=>true,
+            'mensaje'=>'Eliminado correctamente'
+        ]);
     }
 }
