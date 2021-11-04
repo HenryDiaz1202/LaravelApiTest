@@ -35,7 +35,7 @@ class ExampleTest extends TestCase
 
     public function test_delete()
     {
-        $response = $this->delete('/api/tareas/5');
+        $response = $this->delete('/api/tareas/6');
         $response
             ->assertStatus(200)
             ->assertJson([
