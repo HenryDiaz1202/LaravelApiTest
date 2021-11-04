@@ -18,4 +18,29 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    public function test_update()
+    {
+        $response = $this->put('/api/tareas/4',
+        [
+         'nombre' => 'Base datos',
+         'descripcion' => 'Diagrama de base de datos'
+        ]);
+        $response
+            ->assertStatus(200)
+            ->assertJson([
+                'mensaje' => 'Editado correctamente',
+            ]);
+    }
+
+    public function test_delete()
+    {
+        $response = $this->delete('/api/tareas/5');
+        $response
+            ->assertStatus(200)
+            ->assertJson([
+                'mensaje' => 'Eliminado correctamente',
+            ]);
+    }
+
 }
