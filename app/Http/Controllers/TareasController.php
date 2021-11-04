@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\GuardarTareasRequest;
 use App\Models\Tareas;
 use Illuminate\Http\Request;
 
@@ -33,9 +34,13 @@ class TareasController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(GuardarTareasRequest $request)
     {
-        //
+        Tareas::create($request->all());
+        return response()->json([
+            'res'=>true,
+            'mensaje'=>'Guardado correctamente'
+        ]);
     }
 
     /**
