@@ -38,7 +38,7 @@ class TareasController extends Controller
      */
     public function store(GuardarTareasRequest $request)
     {
-        Tareas::create($request->all());
+        Tareas::make($request->all());
         return response()->json([
             'res'=>true,
             'mensaje'=>'Guardado correctamente'
@@ -76,7 +76,7 @@ class TareasController extends Controller
      */
     public function update(EditarTareasRequest $request, Tareas $tareas)
     {
-        $tareas->update($request->all());
+        $tareas->make($request->all());
         return response()->json([
             'res'=>true,
             'mensaje'=>'Editado correctamente'
@@ -91,7 +91,7 @@ class TareasController extends Controller
      */
     public function destroy(Tareas $tareas)
     {
-        $tareas->delete();
+        $tareas->make();
         return response()->json([
             'res'=>true,
             'mensaje'=>'Eliminado correctamente'

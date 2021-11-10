@@ -21,7 +21,7 @@ class ExampleTest extends TestCase
 
     public function test_update()
     {
-        $response = $this->put('/api/tareas/4',
+        $response = $this->put('/api/tareas/6',
         [
          'nombre' => 'Base datos',
          'descripcion' => 'Diagrama de base de datos'
