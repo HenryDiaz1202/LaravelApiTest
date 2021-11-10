@@ -349,3 +349,73 @@ LISTANDO LOS DATOS
 
 
 ![](images/listall.jpg)
+
+
+---------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------
+
+
+# Hacer pruebas de las API sin necesidad de modificar los datos en la base de datos.
+
+
+Para ello, simplemente vamos a cambiar el método en las funciones dentro del controller (controlador) que hemos crado, en todos los métodos vamos a aplicar el método MAKE, en vez de :
+
+
+- POST: para agregar o guardar.
+- GET: para obtener.
+- PUT: para actualizar.
+- DELETE: para eliminar.
+
+
+El método MAKE crea modelos pero no guarda en base de datos a diferencia de lo que viene  siendo el método CREATE que no solo hace hace instancias del modelo, si no que también los almacena en la base de datos.
+
+
+
+![](images/storeMake.jpg)
+
+
+------------------------------------------------------------------------------
+
+
+![](images/updateMake.jpg)
+
+
+------------------------------------------------------------------------------
+
+
+![](images/deleteMake.jpg)
+
+
+### Probando con la base de datos
+
+
+Activamos le base de datos con XAMPP, ejecutamos los tests
+
+
+```
+ejecutando los tests
+-> php artisan test
+```
+
+
+![](images/datosBD.jpg)
+
+
+Estos son los datos existentes, antes de ejecutar el test
+
+
+![](images/addNestest.jpg)
+
+
+Ejecutamos el test y tenemos los mismos datos, lo comprobamos ejecutando la consulta en la base de datos.
+
+
+```
+consulta SQL
+-> select * from NOMBRE_TABLA
+```
